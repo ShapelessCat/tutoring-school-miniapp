@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="card">
+    <view class="title">Teacher Attendance Check-in</view>
+    <input class="input" placeholder="Teacher Name" value="{{teacherName}}" bindinput="onTeacherInput" />
+    <picker mode="selector" range="{{statuses}}" bindchange="onStatusChange">
+      <view class="picker">Status: {{statuses[statusIndex]}}</view>
+    </picker>
+    <button class="primary-btn" bindtap="saveRecord">Save Attendance</button>
+  </view>
+
+  <view class="card">
+    <view class="title">Today Records</view>
+    <block wx:if="{{records.length}}">
+      <view class="record" wx:for="{{records}}" wx:key="id">
+        <view>{{item.teacherName}} - {{item.status}}</view>
+        <view class="muted">{{item.time}}</view>
+      </view>
+    </block>
+    <view wx:else>No records yet.</view>
+  </view>
+</view>

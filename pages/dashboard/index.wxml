@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="card" wx:if="{{!currentUser}}">
+    <view class="title">Welcome</view>
+    <view>Please sign in to continue.</view>
+    <button class="primary-btn" bindtap="goToSignIn">Go to Sign In</button>
+  </view>
+
+  <view class="card" wx:if="{{currentUser}}">
+    <view class="title">Hello, {{currentUser.name}}</view>
+    <view>Role: {{currentUser.role}}</view>
+    <view>Last sign in: {{currentUser.signedAt}}</view>
+  </view>
+
+  <view class="card" wx:if="{{currentUser}}">
+    <view class="title">Quick Actions</view>
+    <button class="secondary-btn" bindtap="goAttendance">Employee Attendance</button>
+    <button class="secondary-btn" bindtap="goFinance">Tuition & Salary Calculator</button>
+  </view>
+</view>

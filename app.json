@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/signin/index",
+    "pages/attendance/index",
+    "pages/finance/index",
+    "pages/dashboard/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "Tutoring School Assistant",
+    "navigationBarBackgroundColor": "#2c7be5",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#2c7be5",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/dashboard/index",
+        "text": "Home"
+      },
+      {
+        "pagePath": "pages/attendance/index",
+        "text": "Attendance"
+      },
+      {
+        "pagePath": "pages/finance/index",
+        "text": "Finance"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,36 @@
+page {
+  background: #f6f8fb;
+  color: #1f2d3d;
+  font-size: 28rpx;
+}
+
+.container {
+  padding: 24rpx;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 8rpx 24rpx rgba(31, 45, 61, 0.08);
+}
+
+.title {
+  font-weight: 600;
+  margin-bottom: 16rpx;
+}
+
+.primary-btn {
+  background: #2c7be5;
+  color: #fff;
+  border: none;
+  border-radius: 12rpx;
+}
+
+.secondary-btn {
+  background: #e9f2ff;
+  color: #2c7be5;
+  border: none;
+  border-radius: 12rpx;
+}
