@@ -1,0 +1,7 @@
+.input,
+.picker {
+  background: #f6f8fb;
+  border-radius: 10rpx;
+  padding: 18rpx;
+  margin-bottom: 18rpx;
+}

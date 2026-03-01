@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="card">
+    <view class="title">Student Tuition (Placeholder Formula)</view>
+    <input class="input" type="digit" placeholder="Total class hours" value="{{studentForm.totalHours}}" data-field="totalHours" bindinput="onStudentInput" />
+    <input class="input" type="digit" placeholder="Rate per hour" value="{{studentForm.ratePerHour}}" data-field="ratePerHour" bindinput="onStudentInput" />
+    <input class="input" type="digit" placeholder="Discount" value="{{studentForm.discount}}" data-field="discount" bindinput="onStudentInput" />
+    <button class="primary-btn" bindtap="calcTuition">Calculate Tuition</button>
+    <view wx:if="{{studentResult}}" class="result">Gross: {{studentResult.grossFee}} | Net: {{studentResult.netFee}}</view>
+  </view>
+
+  <view class="card">
+    <view class="title">Teacher Salary (Placeholder Formula)</view>
+    <input class="input" type="digit" placeholder="Taught hours" value="{{teacherForm.taughtHours}}" data-field="taughtHours" bindinput="onTeacherInput" />
+    <input class="input" type="digit" placeholder="Base rate" value="{{teacherForm.baseRate}}" data-field="baseRate" bindinput="onTeacherInput" />
+    <input class="input" type="digit" placeholder="Attendance bonus" value="{{teacherForm.attendanceBonus}}" data-field="attendanceBonus" bindinput="onTeacherInput" />
+    <button class="primary-btn" bindtap="calcSalary">Calculate Salary</button>
+    <view wx:if="{{teacherResult}}" class="result">Base: {{teacherResult.baseSalary}} | Total: {{teacherResult.totalSalary}}</view>
+  </view>
+</view>

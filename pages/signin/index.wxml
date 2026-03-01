@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="card">
+    <view class="title">Tutoring School Internal Sign In</view>
+    <input class="input" placeholder="Employee Name" value="{{name}}" bindinput="onNameInput" />
+    <picker mode="selector" range="{{roles}}" bindchange="onRoleChange">
+      <view class="picker">Role: {{roles[roleIndex]}}</view>
+    </picker>
+    <button class="primary-btn" bindtap="onSignIn">Sign In</button>
+  </view>
+
+  <view class="card" wx:if="{{currentUser}}">
+    <view class="title">Current Session</view>
+    <view>Name: {{currentUser.name}}</view>
+    <view>Role: {{currentUser.role}}</view>
+    <view>Signed In At: {{currentUser.signedAt}}</view>
+  </view>
+</view>
